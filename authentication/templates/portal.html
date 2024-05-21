@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="../../static/portal.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <form action="Schedule" method="POST">
+            {% csrf_token %}
+
+            <table>
+            
+                <tr>
+                    <th scope="col">Subjects</th>
+                    <th scope="col">Classes</th>
+                </tr>
+                <tr>
+                    <th scope="row">English</th>
+                    <th>
+                        <select name="English" method="post">
+                            <option value="Write On">Write On</option>
+                            <option value="American Lit">American Lit</option>
+                        </select>
+                        
+                        
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">Math</th>
+                    <th>
+                        <select name="Math">
+                            <option value="Algebra 4">Algebra 4</option>
+                            <option value="Caclulus AB">Caclulus AB</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">Social Studies</th>
+                    <th>
+                        <select name="Social">
+                            <option value="World">World History</option>
+                            <option value="US">US History</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">Science</th>
+                    <th>
+                        <select name="Science">
+                            <option value="Chem">Chemistry</option>
+                            <option value="Bio">Biology</option>
+                        </select>
+                    </th>
+                </tr>
+           
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

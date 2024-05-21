@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="../../static/index.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrapper">
+        <form action="signin" method="post">
+            <h1>Login to School Portal</h1>
+            {% csrf_token %}
+                <div class="input-box">
+                    <input type="text" placeholder="ID" name="username" id="idBtn" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="password"  id="passBtn" required>
+                </div>
+                <button type="submit" class="btn" id="loginBtn" onclick="login">Login</button>
+
+        </form>
+    </div>
+</body>
+</html>
